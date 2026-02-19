@@ -29,6 +29,10 @@
             font-family: var(--font-body);
             overflow-x: hidden;
             line-height: 1.4;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('bg-shogun.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
         }
 
         /* Brutalist Layout */
@@ -138,16 +142,7 @@
 
         /* Kinetic Background */
         .shogun-symbol {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 50vh;
-            color: var(--gray);
-            z-index: -1;
-            opacity: 0.3;
-            pointer-events: none;
-            font-family: var(--font-display);
+            display: none;
         }
 
         /* Footer */

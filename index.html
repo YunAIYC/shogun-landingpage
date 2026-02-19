@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOGUN | Your Hospitality Experts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #080808;
+            --white: #F5F5F5;
+            --accent: #E31212; /* Crimson Red */
+            --gray: #1A1A1A;
+            --font-display: 'Syncopate', sans-serif;
+            --font-body: 'Space Grotesk', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.4;
+        }
+
+        /* Brutalist Layout */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+            border-bottom: 1px solid var(--gray);
+            position: relative;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 12vw, 15rem);
+            font-weight: 700;
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+            margin-left: -0.05em;
+            mix-blend-mode: difference;
+        }
+
+        .hero-footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: flex-end;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 300px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .cta-box {
+            justify-self: end;
+            border: 1px solid var(--white);
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box:hover {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 10rem 2rem;
+            border-bottom: 1px solid var(--gray);
+        }
+
+        .section-label {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1px;
+            background-color: var(--gray);
+            border: 1px solid var(--gray);
+        }
+
+        .service-card {
+            background-color: var(--black);
+            padding: 4rem 2rem;
+            transition: background 0.3s;
+        }
+
+        .service-card:hover {
+            background-color: #0f0f0f;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .service-card p {
+            font-weight: 300;
+            color: #AAA;
+        }
+
+        /* Kinetic Background */
+        .shogun-symbol {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50vh;
+            color: var(--gray);
+            z-index: -1;
+            opacity: 0.3;
+            pointer-events: none;
+            font-family: var(--font-display);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .hero-footer {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .hero-title {
+                font-size: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SHOGUN</div>
+        
+        <h1 class="hero-title">Your<br>Hospitality<br>Experts</h1>
+
+        <div class="shogun-symbol">将軍</div>
+
+        <div class="hero-footer">
+            <div class="tagline">Radical transformation for the modern gastro industry.</div>
+            <div class="cta-box">Join the Elite</div>
+        </div>
+    </header>
+
+    <section id="services">
+        <span class="section-label">// CORE DOMAINS</span>
+        <div class="grid-services">
+            <div class="service-card">
+                <h3>Strategy</h3>
+                <p>Architecting independence from portals. We build systems that put you back in control of your guests.</p>
+            </div>
+            <div class="service-card">
+                <h3>Digital</h3>
+                <p>Cutting-edge web experiences and AI-driven automation that scale your vision without losing your soul.</p>
+            </div>
+            <div class="service-card">
+                <h3>Empire</h3>
+                <p>Branding that commands respect. We don't just create logos; we build cultural landmarks in the hospitality space.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>&copy; 2026 SHOGUN Hospitality Group</div>
+        <div>Berlin / Hamburg</div>
+    </footer>
+
+    <script>
+        // Simple parallax effect for the Kanji symbol
+        window.addEventListener('scroll', () => {
+            const symbol = document.querySelector('.shogun-symbol');
+            const speed = 0.5;
+            const yPos = -(window.pageYOffset * speed);
+            symbol.style.transform = `translate(-50%, calc(-50% + ${yPos}px))`;
+        });
+    </script>
+</body>
+</html>
